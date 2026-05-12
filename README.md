@@ -67,6 +67,11 @@ User authentication mechanisms are essential to ensure secure and authorized acc
 
 5.	Notification Systems:
 •	Implementing real-time notifications to inform users of new messages, user presence changes, or other relevant events.
+## Client.py:
+<img width="729" height="467" alt="241528392-325c5679-38e1-4d92-8192-52611704092b" src="https://github.com/user-attachments/assets/5801af77-0a9e-4b33-ab41-ada7eadf62fe" />
+## Server.py:
+<img width="750" height="324" alt="241528436-8fc17b09-bec4-401c-941b-fafc8ddd9a3d" src="https://github.com/user-attachments/assets/33825437-9f17-4014-82d0-5d3ebfd311df" />
+
 
 
 Client-server chat applications are versatile tools that facilitate real-time communication between users over a network. They incorporate various components, including server-side and client-side elements, and must consider factors such as security, scalability, and concurrency. As technology continues to advance, client-server chat applications remain integral for collaborative communication in various domains.
