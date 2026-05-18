@@ -68,11 +68,35 @@ User authentication mechanisms are essential to ensure secure and authorized acc
 5.	Notification Systems:
 •	Implementing real-time notifications to inform users of new messages, user presence changes, or other relevant events.
 ## Client.py:
+```
+import socket
+s=socket.socket()
+s.connect(('localhost',8000))
+print(s.getsockname())
+print(s.recv(1024).decode())
+s.send("acknowledgement recived from the server".encode())
+```
+<img width="452" height="127" alt="Screenshot 2026-05-12 141109" src="https://github.com/user-attachments/assets/62a7af5c-c2b1-4d6e-ba92-1e7122219028" />
 
-<img width="729" height="467" alt="241528392-325c5679-38e1-4d92-8192-52611704092b" src="https://github.com/user-attachments/assets/5801af77-0a9e-4b33-ab41-ada7eadf62fe" />
 
 ## Server.py:
-<img width="750" height="324" alt="241528436-8fc17b09-bec4-401c-941b-fafc8ddd9a3d" src="https://github.com/user-attachments/assets/33825437-9f17-4014-82d0-5d3ebfd311df" />
+```
+
+import socket
+from datetime import datetime
+s=socket.socket()
+s.bind(('localhost',8000))
+s.listen(5)
+c,addr=s.accept()
+print("Client Address : ",addr)
+now = datetime.now()
+c.send(now.strftime("%d/%m/%Y %H:%M:%S").encode())
+ack=c.recv(1024).decode()
+if ack:
+     print(ack)
+     c.close()
+```
+<img width="477" height="146" alt="Screenshot 2026-05-12 141101" src="https://github.com/user-attachments/assets/4673ba69-82d6-4434-ac22-d1d2296d94ed" />
 
 
 
